@@ -1,8 +1,7 @@
 name: learn-github-actions
 on: [push]
 jobs:
-  check-bats-version:
+  ecxecute-upload:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "this is pen"
-      - run: echo $USER
+      - run: nvidia-smi
