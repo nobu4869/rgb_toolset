@@ -2,6 +2,6 @@ name: learn-github-actions
 on: [push]
 jobs:
   ecxecute-upload:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - run: nvidia-smi
