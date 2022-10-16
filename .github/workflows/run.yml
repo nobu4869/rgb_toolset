@@ -4,5 +4,5 @@ jobs:
   ecxecute-upload:
     runs-on: self-hosted
     steps:
-      uses: actions/checkout@v2
+      - uses: actions/checkout@v2
       - run: nvidia-smi
