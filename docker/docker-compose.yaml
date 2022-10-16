@@ -1,0 +1,18 @@
+version: '3'
+services:
+  carla_dev:
+    build: .
+    image: devcarla_vulkan:latest
+    runtime: nvidia
+    privileged: true
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - DISPLAY=${DISPLAY}
+      - UE4_ROOT=/home/carla/UnrealEngine/carla_UE4
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - /home/nobuyuki/repo/carla:/home/carla/carla_host
+      - ~/UnrealEngine:/home/carla/UnrealEngine
+      - /usr/share/vulkan/icd.d:/usr/share/vulkan/icd.d
+       
+    tty: true
