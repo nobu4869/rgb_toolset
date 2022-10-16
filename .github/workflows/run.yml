@@ -3,6 +3,6 @@ on: [push]
 jobs:
   ecxecute-upload:
     runs-on: self-hosted
-    uses: actions/checkout@main
+    uses: actions/checkout@v2
     steps:
       - run: nvidia-smi
